@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: "ubuntu", sans-serif;
+}
+#bg-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%); /* Centers the video */
+    z-index: -1; /* Ensures the video is behind other content */
+    object-fit: cover; /* Ensures the video covers the entire background */
+    pointer-events: none;  
+}
+#content{
+    width: auto;
+    height: 120%;
+}
+  /* Content styling */
+.navbar-nav a {
+    font-size: 15px;
+    font-weight: bolder;
+    margin-left: 20px;
+    transition: all 0.2s ease-out;  
+    font-family: "Noto Sans JP", sans-serif;
+}
+.navbar-nav a:hover {
+    color: #ff0202;
+    transform: translateY(-2px);
+}
+#navbarNav {
+    justify-content: end;
+}
+.navbar {
+    position: sticky !important;
+    padding: 0px 40px;
+    top: 0;
+    width: 100%;
+    z-index: 9999 ;
+    background-color: #fff; 
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+.navbar:hover {
+    transition: 0.2s ease-in-out;
+    box-shadow: 0 4px 4px rgba(248, 2, 2, 0.318);
+}
+.navbar-brand {
+    width: 50px;
+    font-family: "Noto Sans JP", sans-serif;
+    margin-right: 250px;
+}
+.navbar-brand > h2 {
+    font-family: "Noto Sans JP", sans-serif;
+}
+.navbar-toggler-icon {
+    border-color: #dc3545;
+}
+.login-register{
+    font-size: 13px;
+}
+footer {
+    background-color: #dc3545;
+    color: white;
+    padding: 30px 0px;
+    overflow: hidden;
+    
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+}
+footer img{
+    width: 30px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+footer img:hover{
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+.hidden-l {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-25%);
+    transition: 1s;
+}
+.show-l {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+.hidden-r {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(25%);
+    transition: 1s;
+}
+.show-r {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+.home{
+    overflow: hidden;
+}
+.home img{
+    width: 200px;
+}
+.welcome-img{
+    background-image: url('img/home/bg-home.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    margin: 0;
+    width: fit-content;
+    height: fit-content;
+}
+.welcome{
+    animation: aniHome 0.5s ease-out;
+    width: 70%;
+    height: 100%;
+    padding: 100px 0px 100px 80px;
+}
+.welcome-body{
+    width: 65%;
+    margin-top: 100px;
+}
+.welcome-body a{
+    margin-top: 50px;
+}
+.welcome h1{
+    font-size: 80px;
+}
+#welcome-head{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+@keyframes aniHome {
+    from {
+        transform: translateY(-5%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+#hover{
+    margin:0px 20px;
+    padding: 50px;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s, box-shadow 0.5s;
+    background-color: #ffffff86;
+} 
+#hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 1px 8px 16px #dc3545;
+    background-color: white;
+}
+#service{    
+    padding-top: 30px;
+    background-color: rgb(241, 218, 218);
+    padding-bottom: 30px;
+}
+.service-container{
+    margin: 100px 0px;
+    padding-left: 80px;
+    background-color: #dc3545;
+}
+#service > h3{
+    margin-left: 48px;
+}
+#about-us > h3{
+    margin-right: 48px;
+    text-align: end;
+}
+#service-row{
+    padding-bottom: 40px;
+    justify-content: center;
+    margin: 80px 0px;
+}
+#about-us{    
+    padding-top: 30px;
+    background-color: rgb(241, 218, 218);
+    padding-bottom: 30px;
+}
+.about-container{
+    margin: 0px 0px;
+    padding-right: 80px;
+    background-color: #dc3545;
+}
+#btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+#btn:hover {
+    transform: translateY(-5%);
+}
+.process {
+    padding: 0px 0px 50px;
+    /* margin-top: 20px; */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.process h1{
+    margin: 40px 0px 20px 0px;
+}
+#process-row{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.step,.final-step{
+    padding: 20px ;
+    border: 2px solid #000000;
+    border-radius: 20px;   
+    margin: 30px 0;
+    height: 85%;
+    box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s, box-shadow 0.5s;
+    background-color: #ffffff86;
+
+}
+.step-number {
+    background-color: #dc3545;
+    color: white;
+    width: 50px;
+    line-height: 50px;
+    margin: 0 auto 10px;
+    border-radius: 20px;
+    font-size: 24px;
+}
+.step:hover, .final-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 1px 8px 10px #dc3545;
+    background-color: white;
+}
+.process p{
+    font-size: 15px;
+}
+.form-img {
+    padding: 120px 0px;
+}
+#form{
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgba(241, 218, 218, 0.884);
+    padding: 50px;
+    border: 2px solid black;
+    box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.7);
+    transition: transform 0.5s, box-shadow 0.5s;
+    border-radius: 30px;
+}
+#form:hover{
+    background-color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 1px 8px 16px #dc3545;
+}
+#form h1{
+    font-size: 40px;
+}
+#form h4{
+    font-size: 25px;
+}
+#formData{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#formData div{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+div .form-control {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #0000006e; 
+    border-radius: 10px;
+    height: 45px;
+    margin-bottom: 30px;
+    }
+div .form-control:focus {
+    border: 2px solid #c9302c;
+    box-shadow: none;
+}
+#login-form{
+    width: 40%;
+    margin: 100px auto;
+}
+
+.dashboard , .campaigns{
+    text-align: center;
+    width: 90%;
+    margin: 60px auto 100px;
+    overflow: hidden;
+}
+.dashboard-list{
+    display: flex;
+}
+#emp-text1{
+    font-size: 60px;
+    color: rgb(0, 0, 0);
+}
+#emp-text2{
+    font-size: 20px;
+}
+.form-body{
+    margin: 100px 0px;
+}
+.form-check {
+    margin: 20px 0 !important;
+    display: flex;
+    align-items: center;
+}
+
+.form-check-input {
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 10px;
+    border-color: #ffffff !important; 
+    background-color: #dc3545 !important; 
+}
+
+.campaigns ul{
+    padding: 0px;
+}
+
+#alert{
+    width: auto;
+    height: 100px;
+    position: fixed;
+    
+    top: 15%;
+    right: 5%;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    box-shadow: 1px 8px 16px #000000;
+}
+@media (max-width: 1550px) {
+    footer{
+        font-size: smaller;
+    }
+    footer img{
+        width: 20px;
+    }
+    .navbar a{
+        font-size: smaller;
+    }
+    .welcome{
+        font-size: smaller;
+    }
+    .welcome h1{
+        font-size: 60px;
+    }
+    #btn{
+        padding: 8px 15px;
+        font-size: 15px;
+    }
+    #process-row{
+        width: 90%;
+    }
+    .process h1{
+        font-size: 23px;
+        margin: 40px 0px;
+    }
+    .process h3{
+        font-size: 17px;
+    }
+    .step-number {
+        width: 30px;
+        line-height: 30px;
+        font-size: 20px;
+    }
+    .step, .final-step {
+        margin: 10px 0;
+    }
+    .process p{
+        font-size: 12px;
+    }
+    form{
+        width: 90%;
+        padding: 40px;
+        font-size: small;
+    }
+    #formData{
+        width: 100%;
+    }
+    form h1{
+        font-size: 25px;
+    }
+    form h4{
+        font-size: 18px;
+    }
+    #login-form{
+        width: 80%;
+    }
+    #service-row h3{    
+        font-size: 20px;
+    }
+    #service-row p{    
+        font-size: 18px;
+    }
+}
+@media (max-width: 992px) {
+    .navbar .login-register{
+        width: fit-content;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+}
+@media (max-width: 1366px) {
+    .welcome-body{
+        width: 70%;
+        margin-top: 20px;
+    }
+    .welcome{
+        width: 80%;
+    }
+}
+@media (max-width: 576px) {
+    .welcome{
+        width: 100%;
+        padding: 50px 0px 50px 40px;
+    }
+    .welcome-body{
+        width: 80%;
+    }
+    .welcome h1{
+        font-size: 40px;
+    }
+    .about-container{
+        padding-right: 30px;
+    }
+    .service-container{
+        padding-left: 30px;
+    }
+    #service p, #about-us p{
+        font-size: 15px;
+    }
+    #service h3, #about-us h3{
+        font-size: 20px;
+    }
+    #service-row, #about-us-row{
+        margin: 20px 0px;
+    }
+    #hover{
+        width: 80%;
+        padding: 10px;
+        margin-top: 20px;
+    }
+    #alert{
+        font-size: medium;
+    }
+    #bg-video{        
+        top: 50%;
+        left: 10%;
+    }
+    form{
+        width: 100%;
+        padding: 0px;
+    }
+    .campaigns #hover {
+        margin: 20px auto;
+    }
+}
